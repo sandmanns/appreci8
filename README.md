@@ -32,8 +32,8 @@ appreci8 is a collection of bash and R scripts. It was developed on Linux Ubuntu
 To run appreic8, you need to
 
 * Download and install the 8 variant calling tools GATK, Platypus, VarScan, Freebayes, LoFreq, SAMtools, SNVer and VarDict. Select the version you like best. Consider the Config-file to set the correct paths to the tools. Carefully check the execution scripts 01 to 08 and adapt the default configuration if required.
-* Download all dependencies at https://uni-muenster.sciebo.de/s/TzufkAEK1stdGHv⁠
-* Prepare the data as follows (as an example, check out our Example-folder):
+* Download all dependencies at https://uni-muenster.sciebo.de/s/TzufkAEK1stdGHv
+* Prepare the data as follows (as an example, check out our Example-folder or the zipped Example-folder at sciebo):
     * SampleNames.txt: The names of the samples you wish to analyze (without file extension, one name per line)
     * vcf_header.txt: Standard vcf file header (available in the appreci8 folder)
     * Folder alignment: Containing the bam- and bai files of the samples you wish to analyze (format: sample1.bam, sample1.bai etc.)
