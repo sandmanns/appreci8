@@ -12,16 +12,14 @@
 
 <b>Fig. 2.</b> General principle of filtration with appreci8. Calls are classified as ‘Mutations’, ‘Polymorphism’ or ‘Artifact’ on the basis of an artifact- and a polymorphism score
 
+Sandmann S, Karimi M, de Graaf AO, Rohde C, Göllner S, Varghese J, Ernsting J, Walldin G, van der Reijden BA, Müller-Tidow C, Malcovati L, Hellström-Lindberg E, Jansen JH, Dugas M. appreci8: a pipeline for precise variant calling integrating 8 tools. Bioinformatics. 2018 Dec 15;34(24):4205-4212. doi: 10.1093/bioinformatics/bty518.
+
 
 For the use of next-generation sequencing in clinical routine valid variant calling results are crucial. However, numerous variant calling tools are available. These tools usually differ in the variant calling algorithsms, the characteristics reported along with the varaint calls, the recommended filtration strategies for the raw calls and thus, also in the output. Especially when calling variants with a low variant allele frequency (VAF), perfect results are hard to obtain. High sensitivity is usually accompanied by low positive predictive value (PPV).
 
 Appreci8 is a variant calling pipeline for detecting single nucleotide variants (SNVs) and short indels (up to ~30 bp) in next-generation sequencing (NGS) data. By integrating and filtering the output of eight individual variant calling tools (GATK, Platypus, VarScan, Freebayes, LoFreq, SAMtools, SNVer and VarDict; for considering your own selection of variant calling tools, please have a look at the R package 'appreci8R', which allows you to evaluate an unlimited individual selection of tools, for the user interface version aof the appreci8R it is limited to 13) on the basis of an artifact- and a polymorphism score, appreci8 succeeds in calling variants with high sensitivity and positive predictive value even at variant allele frequencies of 1%.
 
-
-
 Important note: Currently, only hg19 is supported.
-
-Sandmann S, Karimi M, de Graaf AO, Rohde C, Göllner S, Varghese J, Ernsting J, Walldin G, van der Reijden BA, Müller-Tidow C, Malcovati L, Hellström-Lindberg E, Jansen JH, Dugas M. appreci8: a pipeline for precise variant calling integrating 8 tools. Bioinformatics. 2018 Dec 15;34(24):4205-4212. doi: 10.1093/bioinformatics/bty518. PMID: 29945233; PMCID: PMC6289140.
 
 
 
@@ -62,4 +60,6 @@ For detailed documentation on the performance of appreci8, please consider our p
 
 In case of errors or feature requests, do not hesitate to open an issue or contact Sarah Sandmann (sarah.sandmann@uni-muenster.de).
 
+## Citation
 
+Sandmann S, Karimi M, de Graaf AO, Rohde C, Göllner S, Varghese J, Ernsting J, Walldin G, van der Reijden BA, Müller-Tidow C, Malcovati L, Hellström-Lindberg E, Jansen JH, Dugas M. appreci8: a pipeline for precise variant calling integrating 8 tools. Bioinformatics. 2018 Dec 15;34(24):4205-4212. doi: 10.1093/bioinformatics/bty518.
