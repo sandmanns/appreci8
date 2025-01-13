@@ -26,8 +26,8 @@ for(n in 1:length(samples[,1])){
                 (is.na(frequency[,9])|frequency[,9]<vaf))
     exclude[,1]<-rowSums(temp,na.rm = T)
     #Filter for low base quality
-    temp<-cbind(as.numeric(is.na(frequency[,11])|frequency[,11]<low_bq),
-                (is.na(frequency[,10])|is.na(frequency[,11])|(frequency[,11]=="ComplexIndel")|(as.numeric(frequency[,10])-as.numeric(frequency[,11]))>=bq_diff))
+    temp<-cbind(as.numeric(!is.na(frequency[,11])&frequency[,11]<low_bq),
+                (!is.na(frequency[,10])&!is.na(frequency[,11])&(frequency[,11]!="ComplexIndel")&(as.numeric(frequency[,10])-as.numeric(frequency[,11]))>=bq_diff))
     exclude[,2]<-rowSums(temp,na.rm = T)
     
     results_filtered<-results[rowSums(exclude)==0,]
