@@ -21,10 +21,13 @@ for(n in 1:length(samples[,1])){
     
     message("Sample: ",samples[n,1]," Calls: ",length(results[,1]))
     #Filter for frequency
-    temp<-cbind(frequency[,7]<nr_alt,frequency[,8]<dp,frequency[,9]<vaf)
+    temp<-cbind((is.na(frequency[,7])|frequency[,7]<nr_alt),
+                (is.na(frequency[,8])|frequency[,8]<dp),
+                (is.na(frequency[,9])|frequency[,9]<vaf))
     exclude[,1]<-rowSums(temp,na.rm = T)
     #Filter for low base quality
-    temp<-cbind(as.numeric(frequency[,11]<low_bq),as.numeric(frequency[,10])-as.numeric(frequency[,11])>=bq_diff)
+    temp<-cbind(as.numeric(is.na(frequency[,11])|frequency[,11]<low_bq),
+                (is.na(frequency[,10])|is.na(frequency[,11])|(frequency[,11]=="ComplexIndel")|(as.numeric(frequency[,10])-as.numeric(frequency[,11]))>=bq_diff))
     exclude[,2]<-rowSums(temp,na.rm = T)
     
     results_filtered<-results[rowSums(exclude)==0,]
